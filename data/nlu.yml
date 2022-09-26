@@ -1,0 +1,169 @@
+version: "3.1"
+
+nlu:
+- regex: paterne
+  examples: |
+    - [a-zA-Z]*\d* 
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: greet_response
+  examples: |
+    - yeah i'm fine and you?
+    - yes Thank you, what about you?
+
+- intent: give_name
+  examples: |
+    - I'm [data](nom)
+    - my name is [data](nom)
+
+- intent: search_intern
+  examples: |
+    - I'm [op](option) student at [sh](school) in [in](intern)
+
+
+# list predefinie des slots
+- lookup: nom
+  examples: |
+    - Salaheddin
+    - Ayoub    
+    - Asmae
+    - [data](paterne)   
+- lookup: option
+  examples: |
+    - Data and Knowledge Engineering
+    - Big data
+    - Artifical Inteligence
+    - Business Intelligence
+- lookup: school
+  examples: |
+    - School of information Siences
+    - ESI
+    - ENSIAS
+    - INPT 
+
+- lookup: intern
+  examples: |
+    - Rabat 
+    - rabat
+
+- intent: demande_stage
+  examples: |   
+    - I'm looking for an new internship opportunity
+    - I have questions about my internship and I need you
+    - concerning my internship
+    - I need your answer for my internship
+    - no this is not my choice
+
+- intent: gerer_stage
+  examples: |
+    - 1
+    - 2
+    - 3
+    - 4
+
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+
+
+
+- intent: mood_thank
+  examples: |
+    - yes,thank you 
+    - thank you for help
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+
+
+
+
+
+
+

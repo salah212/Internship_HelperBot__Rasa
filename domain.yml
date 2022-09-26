@@ -1,0 +1,88 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - mood_thank
+  - bot_challenge
+  - greet_response
+  - give_name
+  - search_intern
+
+  - demande_stage
+
+  - gerer_stage:
+      use_entities: true
+
+entities:
+  - nom
+  - school
+  - option
+  - intern
+  - stage
+
+slots:
+  nom:
+    type: text
+    influence_conversation: true # 
+    mappings: 
+      - type: from_entity
+        entity: nom
+  school:
+    type: text
+    influence_conversation: true # 
+    mappings: 
+      - type: from_entity
+        entity: school
+  option:
+    type: text
+    influence_conversation: true # 
+    mappings: 
+      - type: from_entity
+        entity: option
+  intern:
+    type: text
+    influence_conversation: true # 
+    mappings: 
+      - type: from_entity
+        entity: intern
+  stage:
+    type: text
+    influence_conversation: true # 
+    mappings: 
+      - type: from_entity
+        entity: stage  
+
+
+
+responses:
+  utter_greet:
+  - text: "Hey👋! I'm Intership Helper, How are doing today❓"
+
+  utter_greet_response:
+  - text: "Good tell me what's your name❓"
+
+  utter_thank:
+  - text: "You are Welcome in any time!"
+
+  utter_bye:
+  - text: "Bye good luck👋"
+    image: "C:\\Users\\Salaheddin\\OneDrive\\Documents\\Projets\\Rasa_chatbot\\200.gif"
+
+  
+
+actions:
+  - action_give_name
+  - action_search_intern
+  - action_stage
+  - action_gerer_stage
+  - action_confirmation   
+  #-------------
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,5 @@
+what's the type of internship you are looking for? (choose a number between 1-4)
+1️⃣ Data Science
+2️⃣ Data Analytics
+3️⃣ Business Intelligence
+4️⃣ Web Developpement

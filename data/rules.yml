@@ -1,0 +1,48 @@
+version: "3.1"
+
+rules:
+
+
+#--------------------------------------
+- rule: greet sesponse
+  steps:
+  - intent: greet_response
+  - action: utter_greet_response
+
+
+- rule: give your name
+  steps:
+  - intent: give_name
+  - action: action_give_name
+
+- rule: search intern
+  steps:
+  - intent: search_intern
+  - action: action_search_intern
+  
+
+
+
+#-------------------------------------------
+- rule: decouvrir ce que l'utilisateur veut
+  steps:
+  - intent: demande_stage
+  - action: action_stage
+
+- rule: gerer le stage
+  steps:
+  - intent: gerer_stage
+  - action: action_gerer_stage
+  - action: action_confirmation
+
+
+
+- rule: say thank
+  steps:
+  - intent: mood_thank
+  - action: utter_thank
+
+- rule: say bye
+  steps:
+  - intent: goodbye
+  - action: utter_bye
